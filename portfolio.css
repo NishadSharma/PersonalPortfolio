@@ -30,7 +30,7 @@ h2 {
   gap: 0.5em;
 }
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 600;
   margin-bottom: 0.7rem;
 }
@@ -50,10 +50,19 @@ a:hover, a:focus {
 }
 
 /* --- Layout --- */
+.main-bg {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 .container {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 2.2rem;
+  max-width: 1200px;
+  width: 96vw;
+  margin: 2.5rem auto 2.5rem auto;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  box-sizing: border-box;
 }
 header.navbar {
   margin: 2.5rem 0 2rem 0;
@@ -103,7 +112,7 @@ nav {
 /* --- Hero --- */
 .hero {
   margin-bottom: 3rem;
-  padding: 2.8rem 0;
+  padding: 3.5rem 0 !important;
   background: rgba(255,255,255,0.95);
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.06);
@@ -113,14 +122,16 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 3.5rem;
   max-width: 900px;
   margin: 0 auto;
 }
 .hero-profile-img,
 .hero-profile-img-large {
-  width: 240px;
-  height: 240px;
+  width: 180px;
+  height: 180px;
+  max-width: 220px;
+  max-height: 220px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 12px 40px rgba(30,40,90,0.18);
@@ -142,8 +153,8 @@ nav {
 @media (max-width: 700px) {
   .hero-profile-img,
   .hero-profile-img-large {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     margin-left: 0;
     margin-bottom: 1rem;
   }
@@ -161,7 +172,7 @@ nav {
   line-height: 1.1;
 }
 .subtitle {
-  font-size: 1.22rem;
+  font-size: 1.25rem;
   color: #0071e3;
   font-weight: 600;
   margin-bottom: 1.3em;
@@ -171,7 +182,7 @@ nav {
   letter-spacing: 0.01em;
 }
 .hero-intro {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   color: #333;
   margin-bottom: 2.1em;
   letter-spacing: 0.01em;
@@ -294,7 +305,12 @@ section {
 .project-card, .cert-card {
   flex: 1 1 260px;
   min-width: 220px;
-  max-width: 340px;
+  max-width: 390px;
+}
+.project-img,
+.cert-img {
+  min-height: 160px;
+  border-radius: 18px 18px 0 0;
 }
 .contact-form {
   display: flex;
@@ -381,7 +397,7 @@ footer {
 }
 @media (max-width: 700px) {
   .container {
-    padding: 0 0.7rem;
+    padding: 0.7rem;
   }
   header.navbar {
     flex-direction: column;
@@ -389,7 +405,7 @@ footer {
     padding: 1.2rem 0.5rem 1rem 0.5rem;
   }
   .hero {
-    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem !important;
   }
   .about-section, .projects-section, .certifications-section, .contact-section {
     padding: 1.2rem 0.5rem 0 0.5rem;
@@ -1054,6 +1070,43 @@ footer {
   }
   .cert-card-v2 {
     max-width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+    padding: 3.5rem 3.5rem 2.5rem 3.5rem;
+  }
+  .hero-profile-img,
+  .hero-profile-img-large {
+    width: 220px;
+    height: 220px;
+  }
+  h1 {
+    font-size: 3.1rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 0.7rem;
+  }
+  .hero {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem !important;
+  }
+  .project-card,
+  .cert-card-v2,
+  .cert-card {
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .hero-profile-img,
+  .hero-profile-img-large {
+    width: 120px;
+    height: 120px;
   }
 }
 
